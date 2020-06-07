@@ -1354,7 +1354,7 @@ function Base() {
 
             $.each(pre, function (i) {
                 let obj = $(this), pid = 'pre-' + tools.randomString(6), codeLine, html = '';
-                const regex = /\<span\ style\=\"color\:\ \#008080\;.*\"\>(?:\s\d|\d\d+)\<\/span\>/gm;
+                const regex = /<span style="color: #008080;[^>]*">(?:\s\d|\d\d+)<\/span>/gm;
                 let preCodeLine;
 
                 switch (type) {
